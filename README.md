@@ -126,6 +126,8 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
     ```
 
     - // bind server with this port number\
-    ```app.listen(port, ()=>{
+    ```
+    app.listen(port, ()=>{
         console.log("Server started at port:"+port);
-    })```
+    })
+    ```
