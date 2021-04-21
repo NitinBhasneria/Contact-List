@@ -105,27 +105,29 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - Making app.js
   - Import modules and dependencies we need for building our project 
   - Writing the app.js starting \
-    - // Importing Module
-        `var express = require('express');` //importing express\
-        `var mongoose = require('mongoose');` //importing mongoose\
-        `var bodyparser = require('body-parser');` //importing body-parser\
-        `var cors = require('cors');` //importing cors\
-        `var path = require('path');` //haven't installed path because its one of the code module so we dont have to install it seperately\
+    - Importing Module
+        ```
+        `var express = require('express'); //importing express\
+        `var mongoose = require('mongoose'); //importing mongoose\
+        `var bodyparser = require('body-parser'); //importing body-parser\
+        `var cors = require('cors'); //importing cors\
+        `var path = require('path'); //haven't installed path because its one of the code module so we dont have to install it seperately\
+        ```
 
-    - // For using express we need to assign the express method to a variable\
+    - For using express we need to assign the express method to a variable\
         `var app = express();`\
 
-    - // port number \
+    - port number \
         `const port = 3000;`\
 
-    -  // we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.\
+    - we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.\
     ```
     app.get('/', (req, res) => {
         res.send('Hello World!');
     })
     ```
 
-    - // bind server with this port number\
+    - bind server with this port number\
     ```
     app.listen(port, ()=>{
         console.log("Server started at port:"+port);
