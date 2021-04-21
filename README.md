@@ -76,5 +76,14 @@ node --version
 
 Result In my case -> v14.15.5
 
+PS: Also check the npm version. NPM stands for "Node Package Manager" which is there for managing your dependencies and there versions.
+*npm is distributed with Node. js- which means that when you download Node. js, you automatically get npm installed on your computer.*
+
 # CRUD Operation
 ![curd](https://user-images.githubusercontent.com/44112080/115576720-658cce00-a2e1-11eb-88c0-26878f3f054a.png)
+
+
+# Starting Doc   
+
+## Day 1: 21/04/2021  9:45 PM
+
