@@ -20,6 +20,17 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
   - Saves data in key value pairs.
   - MongoDB saves data in binary format which makes it easier to pass data between client and server.
 
+  ### Installation
+  - [Install](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) Here
+  - Basic Commands
+    - Start MongoDB  `sudo systemctl start mongod`
+    - Verify that MongoDB has started successfully  `sudo systemctl status mongod`
+    - Stop MongoDB  `sudo systemctl stop mongod`
+    - Restart MongoDB  `sudo systemctl restart mongod`
+    - Begin using MongoDB.
+       - Start a mongo shell on the same host machine as the mongod. You can run the mongo shell without any command-line options to connect to a mongod that is           running on your localhost with default port 27017:
+        `mongo`  
+
 ## E: Express
   - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
   - Idea of **Express** came Sinatra, which is popular framework based on **Ruby**. 
@@ -40,7 +51,7 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
   - Events will be done asynchronously, i.e. if we have multiple event process one vent wont wait for other to complete. It can process multiple request at the same time. So, this event-driven architecture makes out node.js server highly optimal and scalable. 
   - PS: For understanding difference between event-driven and request-driven(used in old framework) refer [this](https://www.techtalksbyanvita.com/post/event-driven-vs-request-driven-rest-architecture). See this what is event-driven.
 
-### Installation
+  ### Installation
   - Step 1: Download latest or recommended node .tar.xz file from [Download](https://nodejs.org/en/download/)   
   
   - Step 2: Go to the directory in which (.tar.xz file) is downloaded.
