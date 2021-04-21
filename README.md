@@ -45,7 +45,7 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
     - A suite of developer tools to help you develop, build, test, and update your code.
   - PS: We will be using Angular2. We will be using angular2 as a interface for the client to interfere.
 
-## Node.js
+## N: Node.js
   - Node.js is a server-side JavaScript runtime built on Chrome's V8 JavaScript engine.
   - Follows the event-driven architecture, where there is a single thread mechanism to process your events.
   - Events will be done asynchronously, i.e. if we have multiple event process one vent wont wait for other to complete. It can process multiple request at the same time. So, this event-driven architecture makes out node.js server highly optimal and scalable. 
