@@ -107,11 +107,12 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - Writing the app.js starting \
     - Importing Module
         ```
-        `var express = require('express'); //importing express\
-        `var mongoose = require('mongoose'); //importing mongoose\
-        `var bodyparser = require('body-parser'); //importing body-parser\
+        `var express = require('express'); //importing express
+        `var mongoose = require('mongoose'); //importing mongoose
+        `var bodyparser = require('body-parser'); //importing body-parser
         `var cors = require('cors'); //importing cors\
-        `var path = require('path'); //haven't installed path because its one of the code module so we dont have to install it seperately\
+        `var path = require('path'); //haven't installed path because its one of the 
+                            code module so we dont have to install it seperately
         ```
 
     - For using express we need to assign the express method to a variable\
@@ -121,15 +122,15 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
         `const port = 3000;`\
 
     - we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.\
-    ```
-    app.get('/', (req, res) => {
-        res.send('Hello World!');
-    })
-    ```
+        ```
+        app.get('/', (req, res) => {
+            res.send('Hello World!');
+        })
+        ```
 
     - bind server with this port number\
-    ```
-    app.listen(port, ()=>{
-        console.log("Server started at port:"+port);
-    })
-    ```
+        ```
+        app.listen(port, ()=>{
+            console.log("Server started at port:"+port);
+        })
+        ```
