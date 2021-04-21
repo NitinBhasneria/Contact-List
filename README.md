@@ -41,3 +41,4 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
   - PS: For understanding difference between event-driven and request-driven(used in old framework) refer [this](https://www.techtalksbyanvita.com/post/event-driven-vs-request-driven-rest-architecture). See this what is event-driven.
 
 # CURD Operation
+![curd](https://user-images.githubusercontent.com/44112080/115576720-658cce00-a2e1-11eb-88c0-26878f3f054a.png)
