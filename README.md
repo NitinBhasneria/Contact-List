@@ -7,4 +7,4 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
 # Introduction
   - <b>MEAN</b> is a Full-stack Javascript Solution that helps you build fast, robust, and maintainable production web application using MongoDB, Express, AngularJS, and Node.js 
 
-<img>"./mean1.png></img>
+    ![alt text]("./../mean1.png")
