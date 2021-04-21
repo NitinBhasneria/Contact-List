@@ -6,7 +6,7 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
 
 
 # Introduction
-  - <b>MEAN is a Full-stack Javascript Solution that helps you build fast, robust, and maintainable production web application using MongoDB, Express, AngularJS, and Node.js 
+  - **MEAN** is a Full-stack Javascript Solution that helps you build fast, robust, and maintainable production web application using MongoDB, Express, AngularJS, and Node.js 
 
 # MEAN 
     This is the architecture we will be using.
