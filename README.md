@@ -23,3 +23,21 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
 ## E: Express
   - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
   - Idea of **Express** came Sinatra, which is popular framework based on **Ruby**. 
+  - Expres provides you boilerplate by encapsulation the functionalities of NodeJs so that the whole app building process becomes easier and fast.
+
+## A: Angular
+  - Angular 2 is based on TypeScript.
+  - Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.
+  - Angular is a development platform, built on TypeScript. As a platform, Angular includes:
+    - A component-based framework for building scalable web applications.
+    - A collection of well-integrated libraries that cover a wide variety of features, including routing, forms management, client-server communication, and more.
+    - A suite of developer tools to help you develop, build, test, and update your code.
+  - PS: We will be using Angular2. We will be using angular2 as a interface for the client to interfere.
+
+## Node.js
+  - Node.js is a server-side JavaScript runtime built on Chrome's V8 JavaScript engine.
+  - Follows the event-driven architecture, where there is a single thread mechanism to process your events.
+  - Events will be done asynchronously, i.e. if we have multiple event process one vent wont wait for other to complete. It can process multiple request at the same time. So, this event-driven architecture makes out node.js server highly optimal and scalable. 
+  - PS: For understanding difference between event-driven and request-driven(used in old framework) refer [this](https://www.techtalksbyanvita.com/post/event-driven-vs-request-driven-rest-architecture). See this what is event-driven.
+
+# CURD Operation
