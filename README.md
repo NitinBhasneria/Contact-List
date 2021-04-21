@@ -136,4 +136,4 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
         ```
 
     ### Starting Server
-        `node app.js` Starting the Server you will see this interface.
+        `node app.js` //Starting the Server you will see this interface.
