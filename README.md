@@ -82,3 +82,14 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 # Starting Doc   
 
 ## Day 1: 21/04/2021  9:45 PM
+  - `npm init`: To bend the project and create package.JSON file which will contain dependencies.
+  - Output: `package name: (contact-list) 
+    version: (1.0.0) 
+    description: Mean stack application for contact list
+    entry point: (index.js) app.js
+    test command: 
+    git repository: (https://github.com/NitinBhasneria/Contact-List.git) 
+    keywords: 
+    author: Nitin Bhasneria
+    license: (ISC)`
+  - 

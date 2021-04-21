@@ -1,0 +1,19 @@
+{
+  "name": "contact-list",
+  "version": "1.0.0",
+  "description": "Mean stack application for contact list",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NitinBhasneria/Contact-List.git"
+  },
+  "author": "Nitin Bhasneria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NitinBhasneria/Contact-List/issues"
+  },
+  "homepage": "https://github.com/NitinBhasneria/Contact-List#readme"
+}
