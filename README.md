@@ -20,6 +20,17 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
   - Saves data in key value pairs.
   - MongoDB saves data in binary format which makes it easier to pass data between client and server.
 
+  ### Installation
+  - [Install](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) Here
+  - Basic Commands
+    - Start MongoDB  `sudo systemctl start mongod`
+    - Verify that MongoDB has started successfully  `sudo systemctl status mongod`
+    - Stop MongoDB  `sudo systemctl stop mongod`
+    - Restart MongoDB  `sudo systemctl restart mongod`
+    - Begin using MongoDB.
+       - Start a mongo shell on the same host machine as the mongod. You can run the mongo shell without any command-line options to connect to a mongod that is           running on your localhost with default port 27017:
+        `mongo`  
+
 ## E: Express
   - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
   - Idea of **Express** came Sinatra, which is popular framework based on **Ruby**. 
@@ -34,47 +45,33 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
     - A suite of developer tools to help you develop, build, test, and update your code.
   - PS: We will be using Angular2. We will be using angular2 as a interface for the client to interfere.
 
-## Node.js
+## N: Node.js
   - Node.js is a server-side JavaScript runtime built on Chrome's V8 JavaScript engine.
   - Follows the event-driven architecture, where there is a single thread mechanism to process your events.
   - Events will be done asynchronously, i.e. if we have multiple event process one vent wont wait for other to complete. It can process multiple request at the same time. So, this event-driven architecture makes out node.js server highly optimal and scalable. 
   - PS: For understanding difference between event-driven and request-driven(used in old framework) refer [this](https://www.techtalksbyanvita.com/post/event-driven-vs-request-driven-rest-architecture). See this what is event-driven.
 
-### Installation
-  - [Intall here](https://nodejs.org/en/download/)   
-  - Step 1: Download latest or recommended node .tar.xz file from https://nodejs.org/en/
+  ### Installation
+  - Step 1: Download latest or recommended node .tar.xz file from [Download](https://nodejs.org/en/download/)   
+  
+  - Step 2: Go to the directory in which (.tar.xz file) is downloaded.
+  
+  - Step 3: Update System Repositories.
+    - `sudo apt update`
+  
+  - Step 4: Install the package xz-utils
+    - `sudo apt install xz-utils`
 
-or you can download node version 14.15.5 (.tar.xz file) directly from here ->
+  - Step 5: To Extract the .tar.xz file
+    - `sudo tar -xvf name_of_file`
+    - In my case --> `sudo tar -xvf node-v14.15.5-linux-x64.tar.xz`
 
-https://nodejs.org/dist/v14.15.5/node-v14.15.5-linux-x64.tar.xz
+  - Step 6: sudo cp -r directory_name/{bin,include,lib,share} /usr/
+    - In my case --> `sudo cp -r node-v14.15.5-linux-x64/{bin,include,lib,share} /usr/`
 
-Step 2: Go to the directory in which (.tar.xz file) is downloaded.
-
-In my case --> /Download directory
-
-Step 3: Update System Repositories
-
-sudo apt update
-
-Step 4: Install the package xz-utils
-
-sudo apt install xz-utils
-
-Step 5: To Extract the .tar.xz file
-
-sudo tar -xvf name_of_file
-
-In my case --> sudo tar -xvf node-v14.15.5-linux-x64.tar.xz
-
-Step 6: sudo cp -r directory_name/{bin,include,lib,share} /usr/
-
-In my case --> sudo cp -r node-v14.15.5-linux-x64/{bin,include,lib,share} /usr/
-
-Step 7: Check the node version
-
-node --version
-
-Result In my case -> v14.15.5
+  - Step 7: Check the node version
+    - `node --version`
+    - Result In my case -> v14.15.5
 
 PS: Also check the npm version. NPM stands for "Node Package Manager" which is there for managing your dependencies and there versions.
 *npm is distributed with Node. js- which means that when you download Node. js, you automatically get npm installed on your computer.*
@@ -82,8 +79,6 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 # CRUD Operation
 ![curd](https://user-images.githubusercontent.com/44112080/115576720-658cce00-a2e1-11eb-88c0-26878f3f054a.png)
 
-
 # Starting Doc   
 
 ## Day 1: 21/04/2021  9:45 PM
-
