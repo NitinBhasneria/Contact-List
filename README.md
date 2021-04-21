@@ -82,15 +82,48 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 # Starting Doc   
 
 ## Day 1: 21/04/2021  9:45 PM
-  - `npm init`: To bend the project and create package.JSON file which will contain dependencies.
+  - `npm init`: To bend the project and create package.JSON file which will contain dependencies. // GOT package.json file
   - Output: \
     `package name: (contact-list)` \
-    version: (1.0.0) 
-    description: Mean stack application for contact list
-    entry point: (index.js) app.js
-    test command: 
-    git repository: (https://github.com/NitinBhasneria/Contact-List.git) 
-    keywords: 
-    author: Nitin Bhasneria
-    license: (ISC)`
-  - 
+    `version: (1.0.0) `\
+    `description: Mean stack application for contact list`\
+    `entry point: (index.js) app.js`\ where the point of execution will be at the beginning
+    `test command: `\
+    `git repository: (https://github.com/NitinBhasneria/Contact-List.git) `\
+    `keywords: `\
+    `author: Nitin Bhasneria`
+    `license: (ISC)`\
+
+  - `npm install express --save`: npm install is for installing any dependencies followed by the names of dependencies and by using --save you can save the dependencies in package.JSON file. //GOT NODE MODULE FOLDER 
+    - NOTE: we didnt got the node module folder before because no dependencies were installed before.
+
+  - `npm install mongoose cors body-parser --save`
+    - **Mongoose** is an object document mapper for using mongodb.
+    - **Body-parser** is used for parsing the incoming JSON data.
+    - **CORS** is because we will be having our server code 3000 whereas our client-side code run on 4200.4200 so thats why we dont get an error which is not allowed by default.
+
+  - Making app.js
+  - Import modules and dependencies we need for building our project 
+  - Writing the app.js starting \
+    - // Importing Module
+        `var express = require('express');` //importing express\
+        `var mongoose = require('mongoose');` //importing mongoose\
+        `var bodyparser = require('body-parser');` //importing body-parser\
+        `var cors = require('cors');` //importing cors\
+        `var path = require('path');` //haven't installed path because its one of the code module so we dont have to install it seperately\
+
+    - // For using express we need to assign the express method to a variable\
+        `var app = express();`\
+
+    - // port number \
+        `const port = 3000;`\
+
+    -  // we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.\
+    `app.get('/', (req, res) => {`\
+    `    res.send('Hello World!');`\
+    `})`\
+
+    - // bind server with this port number\
+    `app.listen(port, ()=>{`\
+    `    console.log("Server started at port:"+port);`\
+    `})`\
