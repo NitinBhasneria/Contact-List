@@ -59,7 +59,7 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
     - In my case --> `sudo cp -r node-v14.15.5-linux-x64/{bin,include,lib,share} /usr/`
 
   - Step 7: Check the node version
-    - node --version
+    - `node --version`
     - Result In my case -> v14.15.5
 
 # CRUD Operation
