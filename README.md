@@ -119,7 +119,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
         `const port = 3000;`\
 
     -  // we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.\
-    `app.get('/', (req, res) => {`\
+    `app.get('/', (req, res) => {`&nbsp;
     `    res.send('Hello World!');`\
     `})`\
 
