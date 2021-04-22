@@ -167,3 +167,25 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - On starting server I got the error because I had not exported the route.js which shouch be exported. Also, you will see the server is refreshing its own due to **nodemon**. Also, if you see nodemon uses same command `node app.js` for starting the server.
     
   - Now we can go to *localhost:3000/api/contacts* having this as a output.
+  
+  
+  **Adding methods for data retrive and delete**
+  - Now we are going to connect to our database  and write the logic for retriving data in *route.js* and thats how we are going to send the data in client side application which will make a call to this very particular API and retrive the list of contacts.
+  - Adding the methods:
+    - POST: 
+        ```
+        router.post('/contacts', (req, res, next) => {
+            // logic to add contact
+        });
+        ```
+    - DELETE:
+        ```
+        router.delete('/contacts/:id', (req, res, next) => {
+          // logic to add contact
+        });
+        ```
+        We will be deleting the contact by referring to that particular contact by its ID
+  
+  **Database schema and connections**
+  - Now we need to create a schema for our contact that will be inserted to our database and need to make connection with our database.
+  - So we are going to make a folder named ***models***.
