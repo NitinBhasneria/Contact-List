@@ -8,8 +8,23 @@ var path = require('path'); //haven't installed path because its one of the code
 // For using express we need to assign the express method to a variable
 var app = express();
 
+const route = require('./routes/route');
+
 // port number 
 const port = 3000;
+
+
+//adding middleware
+app.use(cors());
+
+//body-parser
+app.use(bodyparser.json());
+
+// static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+//routes
+app.use('/api', route);
 
 // we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.
 app.get('/', (req, res) => {
@@ -17,6 +32,7 @@ app.get('/', (req, res) => {
 })
 
 // bind server with this port number
+// The app. listen() function is used to bind and listen the connections on the specified host and port. 
 app.listen(port, ()=>{
-    console.log("Server started at port:"+port);
+    console.log("Server started at port:"+port); // output will be seen in terminal.
 })

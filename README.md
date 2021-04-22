@@ -81,7 +81,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 
 # Starting Doc   
 
-## Day 1: 21/04/2021  9:45 PM
+## Day 1: 21/04/2021
   - `npm init`: To bend the project and create package.JSON file which will contain dependencies. // GOT package.json file
   - Output: \
     `package name: (contact-list)` \
@@ -139,3 +139,31 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
       - `node app.js` Starting the Server you will see this interface.
       
       ![contactList1](https://user-images.githubusercontent.com/44112080/115594386-4d25af00-a2f3-11eb-83ed-6675a841cfe0.png)
+
+
+## Day 2: 22/04/2012  
+  - Adding the router folder for handling the route. Basically, in app.js we will import the route file and use `app.use('/api', route)` by this we are telling every route with api go to `route.js` and in route.js we have defined */contact* which defines that route of */api* foes to `route.js` where */contacts* goes to that particular output defined in `route.js`
+  
+  - In short */api/contact* will be directed to the `route.js` for the output.
+  
+  - **CORS**: CORS is shorthand for Cross-Origin Resource Sharing. It is a mechanism to allow or restrict requested resources on a web server depend on where the HTTP request was initiated. This policy is used to secure a certain web server from access by other website or domain.  
+  - **CORS** now we need to add the middleware so that we can parse our data for which we use **CORS**(as a middleware). (***Middleware*** is software that provides common services and capabilities to applications outside of what's offered by the operating system. Data management, application services, messaging, authentication, and API management are all commonly handled by middleware.)
+  
+  - **Body-Parser** In order to get access to the post data we have to use body-parser . Basically what the body-parser is which allows express to read the body and then parse that into a Json object that we can understand. 
+ 
+  - Now, for storing all the static files created a folder public and joining this ***public*** folder to our directory. 
+    - we use `app.use(express.static(path.join(__dirname, 'public')));` we use *__dirname* for the directory name, we can also use the directory path itself.
+  - We created a 
+    ```router.use('/contacts', (req, res, next) => {
+        res.send('Retrieving the Contact List');
+        });        // whatever changes made to the /api/contacts will be directed to here
+    ``` 
+    by this we says that whatever comes with route */api/contact* prints 'Retrieving the Contact List'. 
+  
+  - Every time you make changes to your server side code you have to restart the server. What you can do is install **Nodemon** which will continously watch source code file for changes and refrehes itself. `npm install nodemon`
+  - Run with `nodemon`
+  - Giving error `nodemon: command not found` to me. So I used `sudo npm install -g --force nodemon`
+  
+  - On starting server I got the error because I had not exported the route.js which shouch be exported. Also, you will see the server is refreshing its own due to **nodemon**. Also, if you see nodemon uses same command `node app.js` for starting the server.
+    
+  - Now we can go to *localhost:3000/api/contacts* having this as a output.
