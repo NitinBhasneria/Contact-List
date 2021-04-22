@@ -107,11 +107,11 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - Writing the app.js starting
     - Importing Module
         ```
-        `var express = require('express'); //importing express
-        `var mongoose = require('mongoose'); //importing mongoose
-        `var bodyparser = require('body-parser'); //importing body-parser
-        `var cors = require('cors'); //importing cors
-        `var path = require('path'); //haven't installed path because its one of the 
+        var express = require('express'); //importing express
+        var mongoose = require('mongoose'); //importing mongoose
+        var bodyparser = require('body-parser'); //importing body-parser
+        var cors = require('cors'); //importing cors
+        var path = require('path'); //haven't installed path because its one of the 
                             code module so we dont have to install it seperately
         ```
 
