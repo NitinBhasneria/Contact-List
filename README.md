@@ -167,6 +167,8 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - On starting server I got the error because I had not exported the route.js which shouch be exported. Also, you will see the server is refreshing its own due to **nodemon**. Also, if you see nodemon uses same command `node app.js` for starting the server.
     
   - Now we can go to *localhost:3000/api/contacts* having this as a output.  
+  ![contactlist2](https://user-images.githubusercontent.com/44112080/115741935-d00b4000-a3ad-11eb-84f4-7f1ed67cd8ac.png)
+
   
   **Adding methods for data retrive and delete**
   - Now we are going to connect to our database  and write the logic for retriving data in *route.js* and thats how we are going to send the data in client side application which will make a call to this very particular API and retrive the list of contacts.
