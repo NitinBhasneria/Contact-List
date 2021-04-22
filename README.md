@@ -28,7 +28,7 @@ PS: I have made this application through the [tutorial](https://www.youtube.com/
     - Stop MongoDB  `sudo systemctl stop mongod`
     - Restart MongoDB  `sudo systemctl restart mongod`
     - Begin using MongoDB.
-       - Start a mongo shell on the same host machine as the mongod. You can run the mongo shell without any command-line options to connect to a mongod that is           running on your localhost with default port 27017:
+      - Start a mongo shell on the same host machine as the mongod. You can run the mongo shell without any command-line options to connect to a mongod that is           running on your localhost with default port 27017:
         `mongo`  
 
 ## E: Express
@@ -162,12 +162,11 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   
   - Every time you make changes to your server side code you have to restart the server. What you can do is install **Nodemon** which will continously watch source code file for changes and refrehes itself. `npm install nodemon`
   - Run with `nodemon`
-  - Giving error `nodemon: command not found` to me. So I used `sudo npm install -g --force nodemon`
+     - Giving error `nodemon: command not found` to me. So I used `sudo npm install -g --force nodemon`
   
   - On starting server I got the error because I had not exported the route.js which shouch be exported. Also, you will see the server is refreshing its own due to **nodemon**. Also, if you see nodemon uses same command `node app.js` for starting the server.
     
-  - Now we can go to *localhost:3000/api/contacts* having this as a output.
-  
+  - Now we can go to *localhost:3000/api/contacts* having this as a output.  
   
   **Adding methods for data retrive and delete**
   - Now we are going to connect to our database  and write the logic for retriving data in *route.js* and thats how we are going to send the data in client side application which will make a call to this very particular API and retrive the list of contacts.
