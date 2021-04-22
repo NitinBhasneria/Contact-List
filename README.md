@@ -154,7 +154,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - Now, for storing all the static files created a folder public and joining this ***public*** folder to our directory. 
     - we use `app.use(express.static(path.join(__dirname, 'public')));` we use *__dirname* for the directory name, we can also use the directory path itself.
   - We created a 
-    ```router.use('/contacts', (req, res, next) => {
+    ```router.get('/contacts', (req, res, next) => {
         res.send('Retrieving the Contact List');
         });        // whatever changes made to the /api/contacts will be directed to here
     ``` 
@@ -190,3 +190,103 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   **Database schema and connections**
   - Now we need to create a schema for our contact that will be inserted to our database and need to make connection with our database.
   - So we are going to make a folder named ***models***.
+  - Created *contact.js* inside *models* folder this particular file will be having all our schema(our contact schema).
+  - So we need to bring **Mongoose**, since we are making schema for **MongoDB** so we need to bring **Mongoose**, which(***Mongoose***) will be talking to **MongoDB**  or through that we will be using **MongoDB**.
+  - We have added the schema with *first_name*, *last_name* and *phone* in contact.js
+  - Now we need to connect to our **MongoDB**. In app.js for the connection we will be using `mongoose.connect` function
+  - After connection is made we made to function one for after `connected` and second if we have any error in connection with argument `error`.
+
+
+  **Creating API**
+  - Now we are going to create API for retriving contacts or adding or deleting contacts from database.
+
+    **GET**
+    - So, first we need to bring the contact schema that we have created in *models/contact.js* file to *route.js*
+      - using `const Contact = require('../models/contacts');`
+  
+    - Using in get() functions
+      - ```
+        router.get('/contacts', (req, res, next) => {
+          // for retreiving contact we will be using find 
+          Contact.find((err, contacts) => {
+              res.json(contacts);
+          })
+        });
+        ```
+      - After retriving the contacts all the contact of the contact list will be  saved in the variable contacts( used in `res.json      (contacts)`), which we are sending or responding back to our client in JSON format.\
+      
+    **POST**
+    - In post first we will create a new contact of type Contact(used in schema). We will be giving the arguments in Contact as the input.
+      - ```
+        let newContact = new Contact({
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
+          phone: req.body.phone,
+        })
+        ```
+      - Now we want to insert this new contact in our database for that we will use newContact.save() with *callback function*.
+      - **callback funtion**: A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Example in newContact.save() we are using another arrow function.
+      - Our post function Looks like 
+        - ```
+        - router.post('/contacts', (req, res, next) => {
+            // logic to add contact
+            let newContact = new Contact({
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                phone: req.body.phone,
+            })
+
+            newContact.save((err, contact) => {
+                if(err){
+                    res.json({msg: 'Failed to add contact'});
+                }
+                else {
+                    res.json({msg: 'Contact added succesfully'});
+                }
+            })
+          });
+          ```
+          
+    **DELETE**
+    - When you are inserting any data in database what **MongoDB** does is it create a ID for each document or each contact. Using that very particular ID we will be deleting that particular contact.js*
+    - From client side we'll be recieving that very particular request for deleting that particular contact then using that very ID we're gonna issue our delete command.
+    - We will use *Contact.remove()* function and give the `_id: req.params.id` with a callback function.
+    - Our delete function looks like 
+      - ```
+          router.delete('/contacts/:id', (req, res, next) => {
+            // logic to add contact
+            Contact.remove({_id: req.params.id}, (err, result){
+                if(err) {
+                    res.json(err);
+                } 
+                else {
+                    res.json(result);
+                }
+            })
+          });
+        ```
+
+    - **Checking API**
+    - We will use **POSTMAN** for checking the API.
+    - giving the **POST** request in **post man** with 
+      - header => key: "content-type" and value: "application/json"
+      - body =>
+          {
+            "first_name": "Nitin",
+            "last_name": "Bhasneria",
+            "phone": "9988776644"
+          }
+      - adding url "*localhost:3000/api/contacts*"
+
+    - In **GET** we will see the following output for
+      - {
+            "_id": "6081a85be529723058432e40",
+            "first_name": "Nitin",
+            "last_name": "Bhasneria",
+            "phone": "9988776644",
+            "__v": 0
+        } 
+      - As we can see we have autogenerated id for our contact.
+
+    - In **DELETE** lets copy the id from **GET** request and make the url "*localhost:3000/api/contacts/:id*"
+      - In my case "*localhost:3000/api/contacts/:id6081a86de529723058432e41*"  this will delete the contact. You can recheck by giving the get request.
