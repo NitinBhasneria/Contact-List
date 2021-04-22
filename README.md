@@ -227,8 +227,8 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
       - Now we want to insert this new contact in our database for that we will use newContact.save() with *callback function*.
       - **callback funtion**: A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action. Example in newContact.save() we are using another arrow function.
       - Our post function Looks like 
-        - ```
-        - router.post('/contacts', (req, res, next) => {
+          ```
+             router.post('/contacts', (req, res, next) => {
             // logic to add contact
             let newContact = new Contact({
                 first_name: req.body.first_name,
@@ -252,7 +252,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
     - From client side we'll be recieving that very particular request for deleting that particular contact then using that very ID we're gonna issue our delete command.
     - We will use *Contact.remove()* function and give the `_id: req.params.id` with a callback function.
     - Our delete function looks like 
-      - ```
+        ```
           router.delete('/contacts/:id', (req, res, next) => {
             // logic to add contact
             Contact.remove({_id: req.params.id}, (err, result){
