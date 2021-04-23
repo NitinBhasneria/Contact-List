@@ -437,9 +437,10 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
    - Now remember we  know that the bootstrap component is app.component.html so we need to specify in our app.component.html that this particular component should be loaded so we will go to template app.component.html
 
    **ERROR/DOUBTS TILL NOW**
-    1. Our map function is showing the vsCode error: *Property 'map' does not exist on type 'Observable<Object>'*
+   
+   1. Our map function is showing the vsCode error: *Property 'map' does not exist on type 'Observable<Object>'*
         *SOLUTION*: It is giving an error so I have import map as `import { map } from 'rxjs/operators';` and used pipe too, other thing is used `res:any`;
-    2. In arguments we always have to give type, if we dont know we have to give "any"(contact.service.ts // line 21). So I want to know if it is necessary or it is just vscode error.
+   2. In arguments we always have to give type, if we dont know we have to give "any"(contact.service.ts // line 21). So I want to know if it is necessary or it is just vscode error.
         *SOLUTION*: Although it is not giving any error but somethimes like in map error res: any is used so better prefer use any.
 
    - Lets create the template and display this very particular data.
