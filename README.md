@@ -313,4 +313,21 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 
   - Also you should checkout the concept of [Middleware](https://expressjs.com/en/guide/using-middleware.html#middleware.router).
 
-  - 
+  **Client Application**
+  - Now we are going to make client application where we will be making call for performing various kind of data operation that we have defined in our server side code.
+  - Now we will be using Angular and we'll be creating view templates for show contacts and other features.
+  - For that we will be using angular cli(Command Line Interface) that will be using to build our entire client side interface.
+  - More about [Angular CLI](https://codeburst.io/how-to-build-an-angular-app-with-angular-cli-in-a-couple-of-minutes-43089d3ab272).
+   
+  - Go to project directory and follow up with this code `npm install @angular/cli`
+  - Basically, angular cli will help you to bring all the boilerplate or all the files which is necessary to run your client-sede applicaiton. It will also provide you the code modules which we're gonna use in angular app.
+  - Now we gonna go ahead with creating  a angular project for that we will use \
+    `ng new client`
+      - I got error while install angula/cli
+        - I used this `npm install @angular/cli`
+        - checked with `ng --version`, but got nothing.
+        - Then I installed with  `npm install -g @angular/cli`. With -g it installs in global mode (ie, with -g or --global appended to the command), it installs the current package context (ie, the current working directory) as a global package.
+        - Then in installing in global I got an permission issue so I used `sudo su` to go to root user and installed it.
+        - Got is install successfully. Use `--force` if neccessary.
+        - No check with `ng --version` you will get output like this
+            

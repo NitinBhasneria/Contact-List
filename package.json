@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/NitinBhasneria/Contact-List#readme",
   "dependencies": {
+    "@angular/cli": "^11.2.10",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
