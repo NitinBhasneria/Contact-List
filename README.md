@@ -356,4 +356,6 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
     
     ![contatlist4](https://user-images.githubusercontent.com/44112080/115880723-a95e0f80-a468-11eb-9813-1e9dfb15b392.png)
 
+
+  MUST CHECK [ANGULAR LEARN](https://angular.io/tutorial) AFTER THIS PROJECT.
     
