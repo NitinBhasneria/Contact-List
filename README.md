@@ -290,3 +290,27 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 
     - In **DELETE** lets copy the id from **GET** request and make the url "*localhost:3000/api/contacts/:id*"
       - In my case "*localhost:3000/api/contacts/:id6081a86de529723058432e41*"  this will delete the contact. You can recheck by giving the get request.
+
+## Day 3 23/04/2012
+  - Just started checking out my code and encountered one error.
+  - I was checking the app.js code and checkout out that this code is still there.
+    ```
+      app.get('/', (req, res) => {
+        res.send('Hello World!');
+      })
+    ```
+    So, I thought, going to *localhost:3000/* will still be giving *Hello World!*. But the page was just blank and I tried a lot of time but still its blanked. I wondered why and googled it.
+    And and and I got the answer. I
+    ***ANSWER***: *Since you're using /public in your middleware, only requests with /public will be looked in the static folder*.
+    When I commented out the public line in app.js I got no issue and Hello World! Occured.
+    PS: is you had the code
+    ```
+      app.get('/', (req, res) => {
+        res.send('Hello World!');
+      })
+    ```
+    Then there will be no issue in displaying Hello World! it was just an issue when path is "/".
+
+  - Also you should checkout the concept of [Middleware](https://expressjs.com/en/guide/using-middleware.html#middleware.router).
+
+  - 
