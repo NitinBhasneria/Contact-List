@@ -359,3 +359,14 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 
   MUST CHECK [ANGULAR LEARN](https://angular.io/tutorial) AFTER THIS PROJECT.
     
+  - So this is the rendereing process:  index.html  --->>>  app.component.ts  --->>> app.component.html --->>>  render
+  - I have replaced the app.component.html file's code with the
+      ```
+      <h1>
+        {{title}}
+      </h1>
+      ```
+      It is getting title from app.component.ts we call it interpolation or one-way data binding. We are binding the value of title with "client". Lets make it "Welcome to Contact List".
+      you will see this output 
+
+      
