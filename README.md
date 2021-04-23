@@ -330,4 +330,22 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
         - Then in installing in global I got an permission issue so I used `sudo su` to go to root user and installed it.
         - Got is install successfully. Use `--force` if neccessary.
         - No check with `ng --version` you will get output like this
-            
+      - creating project `ng new client` I have named our frontend code folder to be client.
+      - I had got some options while installing for choosing yes/no, I didn't noticed them and ticked yes and choosen CSS for styling. Will check them later.
+      - This will provideyou all the files.
+  - You can see the "client" folder where you can see basic files like  
+    - Basic component called as *app.component*
+    - Basic module called as *app.module* where you will be specifying all the modules which you are going to use across tha pplication as well as components and services
+    - We have *index.html* **which will be the file rendered at first place** to your web browser, which we have specified in out public folder.
+
+  **Our Folders**
+  - We have index.html which is the file that will be rendered at first place. 
+  - In our index.html file we have `<app-root></app-root>` which will load our app.component.ts
+  - So basically we will have AppComponent *class* to be rendered at first place. You can see this class in *app/app.component.ts*.
+  - You can also see in *app.components.ts* the selector, templateUrl and Styles and defined.
+  - So, for building angular applicaiton we use ***typescript*** language. And this AppComponent class is written in ***typescript***.
+  - Now we have somethings as @ decorator Component(@Component) which tells angular that this very class is a  component and we have template url over here  which specify the template for our component which is *app.component.html* and css too.
+  - For running this particular project use `npm start`..... (make sure you are in client folder).
+  - Also, go can go with `ng serve` too.
+  - Now go to *localhost:4200* and you will see this type of interface
+    
