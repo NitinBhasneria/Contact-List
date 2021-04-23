@@ -369,4 +369,4 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
       It is getting title from app.component.ts we call it interpolation or one-way data binding. We are binding the value of title with "client". Lets make it "Welcome to Contact List".
       you will see this output 
 
-      
+      ![contactlist5](https://user-images.githubusercontent.com/44112080/115889008-2d1bfa00-a471-11eb-916b-d14ab92bd773.png)
