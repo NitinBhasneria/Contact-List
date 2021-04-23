@@ -321,7 +321,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
    
   - Go to project directory and follow up with this code `npm install @angular/cli`
   - Basically, angular cli will help you to bring all the boilerplate or all the files which is necessary to run your client-sede applicaiton. It will also provide you the code modules which we're gonna use in angular app.
-  - Now we gonna go ahead with creating  a angular project for that we will use \
+  - Now we gonna go ahead with creating  a angular project for that we will use 
     `ng new client`
       - I got error while install angula/cli
         - I used this `npm install @angular/cli`
@@ -330,6 +330,10 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
         - Then in installing in global I got an permission issue so I used `sudo su` to go to root user and installed it.
         - Got is install successfully. Use `--force` if neccessary.
         - No check with `ng --version` you will get output like this
+      
+          ![contactList3](https://user-images.githubusercontent.com/44112080/115880701-a400c500-a468-11eb-8fd5-8e0778412c54.png)
+
+      
       - creating project `ng new client` I have named our frontend code folder to be client.
       - I had got some options while installing for choosing yes/no, I didn't noticed them and ticked yes and choosen CSS for styling. Will check them later.
       - This will provideyou all the files.
@@ -349,4 +353,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - Also, go can go with `ng serve` too.
   - Now go to *localhost:4200* and you will see this type of interface
     Interface may vary according to the version used. I am using 11.2.10
+    
+    ![contatlist4](https://user-images.githubusercontent.com/44112080/115880723-a95e0f80-a468-11eb-9813-1e9dfb15b392.png)
+
     
