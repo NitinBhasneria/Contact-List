@@ -348,4 +348,5 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   - For running this particular project use `npm start`..... (make sure you are in client folder).
   - Also, go can go with `ng serve` too.
   - Now go to *localhost:4200* and you will see this type of interface
+    Interface may vary according to the version used. I am using 11.2.10
     
