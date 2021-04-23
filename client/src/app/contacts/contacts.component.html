@@ -1,0 +1,14 @@
+<div class = "container">
+    <div class = "row" *ngFor = "let contact of contacts">    <!-- we'll be iterating over contact using contact variable so each contact(variable)
+        in our contacts(variable array) arrya  will be rertieved in contact variable and that variable will be displaying as a list -->
+        <div class ="col-md-3">
+            {{contact.first_name}}
+        </div>
+        <div class ="col-md-3">
+            {{contact.last_name}}
+        </div>
+        <div class ="col-md-3">
+            {{contact.phone}}
+        </div>
+    </div> 
+</div>

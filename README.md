@@ -370,3 +370,104 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
       you will see this output 
 
       ![contactlist5](https://user-images.githubusercontent.com/44112080/115889008-2d1bfa00-a471-11eb-916b-d14ab92bd773.png)
+
+  - Notice that we used **nodemon** in server-side code (express app) for refreshing the changes while it is not required in angular app. It automatically watch for changes and restart the app.
+  - You also notice the **ts** files, all this *ts* files are converted to *js* files and then rendered.
+  
+  ### Creating Components
+    - Now we need a basic component "Contacts" for listing the contacts and other features like a form for adding or button for deleting the contacts.
+    - For creating components use 
+      `ng g component contacts` giving the name of component to be "contacts" 
+    - We need a **service** too. Basically it is considered a good practice to seperate business logic or data retriving or data operations logic in a seperate file which we call as **service**. Then what we do is inject those services into component wherever necessary.
+    - Add service with 
+      `ng g service contact` a service of name contact
+      - This command generate the service but did not provide the service so if you want to use the service you have to provide it in you @Component(@ Component Decorator)
+    - We have *contact.service.ts* in *app* folder where we will be writing our business logic or our data retriving or data operations logic and we will have *contact* components where we will be creating our template and all the logic. 
+
+  ### Creating Service
+    - So we'll start with creating services so that we can  retrive the data first then we'll start with creating contacts.components
+    - One more thing we need is the schema for our contact so lets make a file *contact.ts* (ts for **typescript**); 
+    - Contact.ts we created a schema
+      ```
+      export class Contact{
+        _id?: string;           // added ? for optional field
+        first_name: string;
+        last_name: string;
+        phone: string;
+      }
+      ```
+    - Here I got the error "Property 'phone' has no initializer and is not definitely assigned in the constructor." As in latest version of TypeScript the "Strict class initialization".
+    - Solution: 
+      - 1. Change Version
+      - 2. Initialize.
+      - I choose going with option2.
+      - now code looks like:
+        ```
+        export class Contact{
+            _id?: string;           // added ? for optional field
+            first_name: string = "";
+            last_name: string = "";
+            phone: string = "";
+        }
+        ```
+    - contact.service.ts
+      - Now we need to import out HTTP  module for getting all HTTP methods for  retriving data or adding or deleting and all.
+      - While importing Http got another error "Cannot find module '@angular/http' or its corresponding type declarations." So I was following th angular version2 but in angular5 they updated it and I am using angular 11 so that follows the same.
+        ```
+          import {HttpClientModule} from '@angular/common/http'
+          import {HttpClient, HttpHeaders} from '@angular/common/http'
+          **instead of HttpModule and Http respectively**
+        ```
+
+        used `import {HttpClient, HttpHeaders} from '@angular/common/http'`
+
+      - Used HttpClient. 
+      - Now we are going to create methods for retriving the contacts and others too.
+      - So we have our services ready, now we'll be using  all of this methods into out component and  we're gonna use this methods for there functions and finally will do somthing on it like show contacts, adding or deleting.
+
+
+  ## Adding code in components
+    - **Dependency Injection**: Used in // line 16 in contact.components.the_silver_searcher
+      - *Defination*: Dependency Injection is a practice where objects are designed in a manner where they receive instances of the objects from other pieces of code, instead of constructing them internally. This means that any object implementing the interface which is required by the object can be substituted in without changing the code, which simplifies testing, and improves decoupling.
+    
+    - Second thing is you have to provide your service to use it. // line 9
+    
+    - On let us retrive data, we'll be putting out retrieving data logic inside ngOnInit() method which will be initiated once your component is being loaded into your browser so every time you load  your component it will automatically call this very particularly method to retrieve all the data.  
+    
+    - Now remember we  know that the bootstrap component is app.component.html so we need to specify in our app.component.html that this particular component should be loaded so we will go to template app.component.html
+
+    **ERROR/DOUBTS TILL NOW**
+    1. Our map function is showing the vsCode error: *Property 'map' does not exist on type 'Observable<Object>'*
+        *SOLUTION*: It is giving an error so I have import map as `import { map } from 'rxjs/operators';` and used pipe too, other thing is used `res:any`;
+    2. In arguments we always have to give type, if we dont know we have to give "any"(contact.service.ts // line 21). So I want to know if it is necessary or it is just vscode error.
+        *SOLUTION*: Although it is not giving any error but somethimes like in map error res: any is used so better prefer use any.
+
+    - Lets create the template and display this very particular data.
+    - For styling we need to refer to the bootstrap style sheet. [Bootswatch](https://bootswatch.com/)
+    - Downloaded and imported the stylesheet in client/src/index.html
+
+
+    ### ALL DONE BUT........
+    - I am encoutering some error:
+      
+      1. Error: "Refused to apply style from 'http://localhost:4200/bootstrap.min.css' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled."
+        *SOLUTION*: instead of `<link rel="stylesheet" href="./bootstrap.min.css">` use `<base href="./bootstrap.min.css" >`
+      
+      2. Error: "ERROR NullInjectorError: R3InjectorError(AppModule)[HttpClient -> HttpClient -> HttpClient]: 
+  NullInjectorError: No provider for HttpClient!"   
+        *SOLUTION*: To resolve this problem HttpClient is Angular's mechanism for communicating with a remote server over HTTP.
+                    - To make HttpClient available everywhere in the app,
+                    - open the root AppModule app/app.module.ts,
+                    - `import the HttpClientModule from @angular/common/http`
+                    - add it to the @NgModule.imports array.
+                    - `imports:[HttpClientModule,  ]`
+      
+      3. Error: "TypeError: res.json is not a function"
+          *SOLUTION*: HttpClient.get() applies res.json() automatically and returns Observable<HttpResponse<string>>. You no longer need to call this function yourself. So removed the pipe and map function in getContacts() function in contact.service.ts and also changed the type(datatype) of contacts in contacts.component.ts line 13 to "any" from "Contact[]".
+
+      4. Problem: "I am unable to import my bootstrap.css"
+          *SOLUTION*: import the bootstrap.css or any other css file in styles.css as `@import './bootstrap.css'`
+
+  After having all problem solved got the output as: 
+
+  
