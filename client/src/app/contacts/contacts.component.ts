@@ -19,6 +19,35 @@ export class ContactsComponent implements OnInit {
   // here ContactService is type(data type) of Contact Service and this very process is called dependency injection.
   constructor(private ContactService: ContactService) {   }
 
+  addContact() {
+      const newContact = {
+          first_name: this.first_name,
+          last_name: this.last_name,
+          phone: this.phone
+      }
+      this.ContactService.addContact(newContact)
+            .subscribe(contact => {
+                this.contacts.push(contact);
+                this.ContactService.getContacts()
+                    .subscribe( contacts => 
+                        this.contacts = contacts ) 
+            }); 
+  }
+
+  deleteContact(id:any) {
+    var contacts = this.contacts;   //this.contacts refer to contacts declared in line 13
+    this.ContactService.deleteContact(id)
+            .subscribe((data:any) => {
+              if(data.n==1){        // deleting the contacts htat is already stored in our array of contacts(this.contacts)
+                for(var i=0;i<contacts.length;i++) {
+                    if(contacts[i]._id == id) {
+                        contacts.splice(i,1);
+                    }
+                }
+              }
+            })
+  }
+
   ngOnInit(): void {
     this.ContactService.getContacts()
           .subscribe( contacts => 

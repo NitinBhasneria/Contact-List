@@ -21,14 +21,10 @@ export class ContactService {
       var headers = new HttpHeaders();
       headers.append('Content-Type', 'application/json');
       return this.http.post('http://localhost:3000/api/contacts', newContact, {headers:headers})
-            .pipe(map((res:any) => res.json())
-            ); 
     }
 
     //delete contacts
     deleteContact(id:any) {
       return this.http.delete('http://localhost:3000/api/contacts/'+id)
-            .pipe(map((res:any) => res.json())
-            );
     }
 }

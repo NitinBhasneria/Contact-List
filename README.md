@@ -470,3 +470,37 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
   After having all problem solved got the output as: 
 
   ![contactlist6](https://user-images.githubusercontent.com/44112080/115910718-cc012000-a48a-11eb-93ee-4b87a767a6bb.png)
+
+
+  ## Day 4: 24/04/2021
+  - Going to add delete button for our contact.
+  - Added delete button in contacts.components.html.
+  - Adding delete() method in contacts.components.ts. Also, we have to delete the contact from the array "contacts".
+  - Adding the add Contacts method. 
+  - Adding the form. And we gonna use something called as ngModel for two way data binding  so whatever changes we gonna make there to firstname or we can say when we take input of first name then our this.firstname variable(param) changes with that. 
+
+    ### ERRORS 
+    1. Error: "Can't bind to 'ngModel' since it isn't a known property of 'input'"
+        *SOLUTION*: In the app.module.ts file, I just added:
+                  ```
+                  import { FormsModule } from '@angular/forms';
+
+                  [...]
+
+                  @NgModule({
+                    imports: [
+                      [...]
+                      FormsModule
+                    ],
+                    [...]
+                  })
+                  ```
+    2. Error: "error NG8001: 'app-contacts' is not a known element: If 'app-contacts' is an Angular component, then verify that it is part of this module. If 'app-contacts' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message."
+      *SOLUTION*: Haha, I added the above solution FormModule in declaration. LOL Got it corrected.
+
+
+  - Yup, adding contacts is wokring BUT BUT BUT we have to refresh the webpage everytime we add the data, it is happenning because our ngOnInit() method for retrieving the contacts so basically whenever you are retrieving the contacts and displaying it at that very particular time your browser never allows you to block your UI so for that we can put the function call or function defination in addContacts() too. 
+   
+
+  - WHOLE APPLICATION IS READY. WE MAY ADD SOME OTHER FEATURE OR IMPROVE THE FORMS IN FUTURE.
+  - THANK YOU
