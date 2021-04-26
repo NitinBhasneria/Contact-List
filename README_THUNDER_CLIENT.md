@@ -23,3 +23,7 @@
 3. - In **DELETE** lets copy the id from **GET** request and make the url "*localhost:3000/api/contacts/:id*"
       - In my case "*localhost:3000/api/contacts/:id6081a86de529723058432e41*"  this will delete the contact. You can recheck by giving the get request.
     ![delete](https://user-images.githubusercontent.com/44112080/116116013-4b376380-a6d8-11eb-8604-ce1b0db44f2c.png)
+
+
+## Conclusion
+  POSTMAN no more needed. xD :>
