@@ -1,5 +1,5 @@
 ## DAY 5: 26/04/2021
-## Learning About Databases Services
+## Learning About Cloud Computing Services
 
   ### Azzure Basic Points
   - [Video](https://www.youtube.com/watch?v=3Arj5zlUPG4) from Simplilearn  
@@ -14,6 +14,7 @@
     6. Hosting blogs and applications.
   - **What is Azzure?**: Azure is a cloud computing platform and an online portal to access and manage resources and services provided by *Microsoft*.
     ![Azzure](https://user-images.githubusercontent.com/44112080/116106270-af095e80-a6cf-11eb-8da7-4c006f9f43b6.png)
+   
 
   
   ### AWS Basic Points
@@ -33,11 +34,11 @@
   - Stability.
   - Trusted Vendor.
   - #### Service overview
-  - **EC2(*Elastic Compute Cloud*)**: This is the service which gives you bare servers, so this servicewill give you a machine which oyu can launch and you can run your software on those. You can get small or big machines based on your requirements. 
-  - **VPC(*Virtual Private Cloud*)**: In this service amazon will not allow you full control of the cloud instead they gives you the chunks of the cloud which is **VPC**. So, VPC lets you create the network in the cloud and then run  your servers in those networks.
-  - **S3(*Simple Storage Service*)**: S3 gives you the opportunity to upload and share files so does mostly the file storage and sharing service.
-  - **RDS(*Relational Database Service*)**: RDS allows you to run and manage databases on the cloud, so they have all the major flavours of the databases like from SQl Server to Oracle and mysql. 
-  - **Route 53**: It is for dns, so they have got a managed DNS service where you can point your dns to amazon and they take care of the stuff. So, it's a global dns service it's a scalable dns service so it scales according to demand.
-  - **ELB(*Elastic Load Balancing*)**: It is a service which gives you the oppurtunity to load balanced incoming traffic to multiple machine so this way you can setup your web applications to any number of users.
-  - **Auto Scaling**: Adds the capacity on-the-fly to elastic load balancers so that your websit or your application is never down due to a load.  
+    1. **EC2(*Elastic Compute Cloud*)**: This is the service which gives you bare servers, so this servicewill give you a machine which oyu can launch and you can run your software on those. You can get small or big machines based on your requirements. 
+    2. **VPC(*Virtual Private Cloud*)**: In this service amazon will not allow you full control of the cloud instead they gives you the chunks of the cloud which is **VPC**. So, VPC lets you create the network in the cloud and then run  your servers in those networks.
+    3. **S3(*Simple Storage Service*)**: S3 gives you the opportunity to upload and share files so does mostly the file storage and sharing service.
+    4. **RDS(*Relational Database Service*)**: RDS allows you to run and manage databases on the cloud, so they have all the major flavours of the databases like from SQl Server to Oracle and mysql. 
+    5. **Route 53**: It is for dns, so they have got a managed DNS service where you can point your dns to amazon and they take care of the stuff. So, it's a global dns service it's a scalable dns service so it scales according to demand.
+    6. **ELB(*Elastic Load Balancing*)**: It is a service which gives you the oppurtunity to load balanced incoming traffic to multiple machine so this way you can setup your web applications to any number of users.
+    7. **Auto Scaling**: Adds the capacity on-the-fly to elastic load balancers so that your websit or your application is never down due to a load.  
     
