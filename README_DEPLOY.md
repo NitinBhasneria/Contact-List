@@ -37,7 +37,8 @@
       4. **Queue Storage**: Provides durable message queuing for large workloads and can be accessed from anywhere in the world.
      
     - ## Uses of Azure
-      
+      ![Azzure3](https://user-images.githubusercontent.com/44112080/116109202-335ce100-a6d2-11eb-86b5-a000d7e7da94.png)
+
 
 
 
