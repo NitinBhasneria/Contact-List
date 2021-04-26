@@ -208,7 +208,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
       - ```
         router.get('/contacts', (req, res, next) => {
           // for retreiving contact we will be using find 
-          Contact.find((err, contacts) => {
+          Contact.find((err, contacts) => {https://www.thunderclient.io/welcome
               res.json(contacts);
           })
         });
