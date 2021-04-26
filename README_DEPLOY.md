@@ -14,7 +14,9 @@
     6. Hosting blogs and applications.
   - **What is Azzure?**: Azure is a cloud computing platform and an online portal to access and manage resources and services provided by *Microsoft*.
     ![Azzure](https://user-images.githubusercontent.com/44112080/116106270-af095e80-a6cf-11eb-8da7-4c006f9f43b6.png)
-   
+  - Azzure Services
+
+    ![Azzure2](https://user-images.githubusercontent.com/44112080/116106950-335be180-a6d0-11eb-9f02-da6f77b13bfa.png)
 
   
   ### AWS Basic Points
