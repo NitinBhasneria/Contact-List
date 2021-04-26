@@ -17,8 +17,33 @@
   - Azzure Services
 
     ![Azzure2](https://user-images.githubusercontent.com/44112080/116106950-335be180-a6d0-11eb-9f02-da6f77b13bfa.png)
+    
+    - **Compute**:
+      1. **Virtual Machine**: Create windows or linux virtual machine of any configuration in matter of seconds.
+      2. **Cloud Services**: Users can create a scalable applications within the cloud using the virtual machines whose provisioning, load balancing and health monitoring are handled by Azure post-deployment.
+      3. **Service Fabric**: Simplifies microservices development and application  lifecycle management.
+      4. **Functions**: Easily build applications using serverless functions in any programming language of the user's choice.
 
-  
+    - **Networking**:
+      1. **Azure CDN**: Azure CDN service are used for delivering high bandwidth content to user worldwide.
+      2. **Express Route**: Express route lets on-premises networks into Microsoft cloud through a private connection.
+      3. **Virtual Network**: Virtual Network enables Azure resources to securely communicate with each other.
+      4. **Azure DNS**: It is a hosting service that allows the user to host their DNS domain in Azure.
+
+    - **Storage**:
+      1. **Dist Storage**: Provides cost-effective HDD/SDD options which can be used with Azure Virtual Machine.
+      2. **Blob Storage**: It is optimized for storing massive amounts of unstructured data, such as text or binary data.
+      3. **File Storage**: Managed file storage in the cloud that are accessible via industry standard service message block(SMB) protocol.
+      4. **Queue Storage**: Provides durable message queuing for large workloads and can be accessed from anywhere in the world.
+     
+    - ## Uses of Azure
+      
+
+
+
+
+
+
   ### AWS Basic Points
   - [Video](https://www.youtube.com/watch?v=r4YIdn2eTm4&t=30s) from Simplilearn
   - #### What is AWS?
@@ -43,4 +68,3 @@
     5. **Route 53**: It is for dns, so they have got a managed DNS service where you can point your dns to amazon and they take care of the stuff. So, it's a global dns service it's a scalable dns service so it scales according to demand.
     6. **ELB(*Elastic Load Balancing*)**: It is a service which gives you the oppurtunity to load balanced incoming traffic to multiple machine so this way you can setup your web applications to any number of users.
     7. **Auto Scaling**: Adds the capacity on-the-fly to elastic load balancers so that your websit or your application is never down due to a load.  
-    
