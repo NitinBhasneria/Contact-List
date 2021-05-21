@@ -6,7 +6,7 @@
         <label>First Name</label>
         <input
           type="text"
-          [(ngModel)]="first_name"
+          [(ngModel)]="first_name"  
           name="first_name"
           class="form-control"
         />
@@ -15,7 +15,7 @@
         <label>Last Name</label>
         <input
           type="text"
-          [(ngModel)]="last_name"
+          [(ngModel)]="last_name" 
           name="last_name"
           class="form-control"
         />
@@ -24,11 +24,11 @@
         <label>Phone No.</label>
         <input
           type="text"
-          [(ngModel)]="phone"
+          [(ngModel)]="phone" 
           name="phone"
           class="form-control"
           required
-        />
+        /><!-- used () for ngModel beacuse ngModel is not an variable exported rather a keyword -->
       </div>
       <input type="submit" class="btn btn btn-success" value="Add" />
     </form>

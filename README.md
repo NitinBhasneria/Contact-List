@@ -473,11 +473,14 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
 
 
   ## Day 4: 24/04/2021
+  - Interpolation {{ }} lets you render the property value as text.
+  - Event binding uses a set of parentheses, ( ), around the event, as in the (submit) event on the <form> element.
   - Going to add delete button for our contact.
   - Added delete button in contacts.components.html.
   - Adding delete() method in contacts.components.ts. Also, we have to delete the contact from the array "contacts".
   - Adding the add Contacts method. 
   - Adding the form. And we gonna use something called as ngModel for two way data binding  so whatever changes we gonna make there to firstname or we can say when we take input of first name then our this.firstname variable(param) changes with that. 
+  - [] is used for binding the data. you can have more look at this [here](https://angular.io/guide/what-is-angular).
 
     ### ERRORS 
     1. Error: "Can't bind to 'ngModel' since it isn't a known property of 'input'"
