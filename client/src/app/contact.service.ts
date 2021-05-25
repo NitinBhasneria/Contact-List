@@ -11,7 +11,7 @@ export class ContactService {
 
   // retrieving contacts
   getContacts() {
-    // return all contacts which we will be getting through while I cm calling to my API.
+    // return all contacts which we will be getting through while I am calling to my API.
     return this.http.get('http://localhost:3000/api/contacts');
   }
 

@@ -41,7 +41,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //routes
 app.use('/api', route);
 
-// we need to add a route so that if we go to localhost:3000 then we neeed to specify what it needs to render for that homepage route.
+// we need to add a route so that if we go to localhost:3000 then we need to specify what it needs to render for that homepage route.
 app.get('/', (req, res) => {
     res.send('Hello World!');
 })
