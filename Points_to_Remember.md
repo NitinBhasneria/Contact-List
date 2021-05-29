@@ -1,0 +1,2 @@
+- Express will automatically look inside the views/ folder for template files
+- The res.render() method is used to render the view we pass it and send the HTML to the client
