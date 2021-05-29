@@ -305,7 +305,7 @@ PS: Also check the npm version. NPM stands for "Node Package Manager" which is t
     When I commented out the public line in app.js I got no issue and Hello World! Occured.
     PS: is you had the code
     ```
-      app.get('/', (req, res) => {
+      app.get('/anything', (req, res) => {
         res.send('Hello World!');
       })
     ```
