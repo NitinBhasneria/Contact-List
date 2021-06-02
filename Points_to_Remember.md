@@ -1,2 +1,3 @@
 - Express will automatically look inside the views/ folder for template files
 - The res.render() method is used to render the view we pass it and send the HTML to the client
+- If sending the cookies and redirecting then dont ue .send() refer [this.](https://groups.google.com/g/nodejs/c/BkoHoRPpRs8?pli=1)
